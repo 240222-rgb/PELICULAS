@@ -1,7 +1,20 @@
 .footer {
-  margin-left: 250px;
-  padding: 20px;
-  background-color: #0d0d0d;
-  color: white;
-  text-align: center;
+  position: fixed;   /* Lo deja pegado en la pantalla */
+  bottom: 0;         /* Lo sitúa al puro fondo */
+  left: 0;           /* Alineado a la izquierda */
+  width: 100%;       /* Abarca toda la pantalla de lado a lado */
+  height: 60px;      /* Altura fija */
+  background: #111111; /* Mismo negro que el menú para que combine */
+  color: #888888;    /* Gris suave para el texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  border-top: 1px solid #222; /* Una línea sutil para separar */
+  z-index: 1000;     /* Para que siempre esté por encima del contenido */
+}
+
+.footer-content p {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
 }

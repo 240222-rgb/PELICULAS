@@ -1,23 +1,47 @@
-import "./Contacto.css"
+import "./Contacto.css";
 
 function Contacto() {
   return (
-    <div className="contacto">
-      <h2>Contáctanos</h2>
-      <form>
-        <input type="text" placeholder="Tu nombre" />
-        <input type="email" placeholder="Tu correo" />
-        <textarea placeholder="Escribe tu mensaje"></textarea>
-        <button type="submit">Enviar</button>
-      </form>
+    <section className="contacto-section">
+      <div className="contacto-container">
+        
+        {/* Lado Izquierdo: Información */}
+        <div className="contacto-info">
+          <h2 className="contacto-titulo">¿Tienes alguna duda?</h2>
+          <p className="contacto-subtitulo">
+            Escríbenos y nuestro equipo de <span>Amor & Cine</span> te contactará lo antes posible.
+          </p>
+          <div className="info-items">
+            <div className="info-item">
+              <span className="icon">📍</span>
+              <p>Av. Romance 123, Ciudad de México</p>
+            </div>
+            <div className="info-item">
+              <span className="icon">📧</span>
+              <p>contacto@amorycine.com</p>
+            </div>
+          </div>
+        </div>
 
-      <div className="info">
-        <p>Email: contacto@amorycine.com</p>
-        <p>Tel: 55-1234-5678</p>
-        <p>Dirección: Av. Romance 123, CDMX</p>
+        {/* Lado Derecho: Formulario Pro */}
+        <div className="contacto-form-container">
+          <form className="contacto-form">
+            <div className="input-group">
+              <input type="text" placeholder="Tu nombre" required />
+            </div>
+            <div className="input-group">
+              <input type="email" placeholder="Correo electrónico" required />
+            </div>
+            <div className="input-group">
+              <textarea placeholder="¿En qué podemos ayudarte?" rows="4" required></textarea>
+            </div>
+            <button type="submit" className="btn-enviar">Enviar Mensaje</button>
+          </form>
+        </div>
+
       </div>
-    </div>
-  )
+    </section>
+  );
 }
 
-export default Contacto
+export default Contacto;

@@ -1,33 +1,116 @@
-.menu {
-  width: 250px;
-  height: 100vh;
-  background-color: #0d0d0d;
-  color: white;
-  position: fixed;
-  left: 0;
-  top: 0;
-  padding: 30px 20px;
-  box-shadow: 2px 0 15px rgba(139, 0, 0, 0.4);
-}
+/* Importación de fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-.logo {
-  color: #8b0000;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.menu ul {
-  list-style: none;
+* {
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.menu li {
-  margin: 20px 0;
+.navbar {
+  background: #111111; /* Negro profundo tipo sala de cine */
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #222;
+  width: 100%;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px;
+  max-width: 1500px;
+}
+
+/* Estilos del Logo */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-.menu li:hover {
-  color: #ff1a1a;
-  transform: translateX(5px);
+.navbar-logo-img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(255, 77, 109, 0.6));
+}
+
+.logo-text {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.logo-text span {
+  color: #ff4d6d; /* Rojo neón romántico */
+  text-shadow: 0 0 10px rgba(255, 77, 109, 0.3);
+}
+
+/* Menú y Botones */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links {
+  background: transparent;
+  border: none;
+  color: #bbb;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
+}
+
+.nav-links:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Botón Destacado (Call to Action) */
+.btn-highlight {
+  background: #ff4d6d !important;
+  color: white !important;
+  font-weight: 600;
+  margin-left: 10px;
+  box-shadow: 0 4px 15px rgba(255, 77, 109, 0.2);
+}
+
+.btn-highlight:hover {
+  background: #ff758f !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 77, 109, 0.4);
+}
+
+/* Adaptación para pantallas pequeñas (Móvil) */
+@media screen and (max-width: 768px) {
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  
+  .nav-links {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .navbar-logo-img {
+    width: 35px;
+    height: 35px;
+  }
 }
