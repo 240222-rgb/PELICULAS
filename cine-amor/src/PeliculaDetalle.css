@@ -1,0 +1,66 @@
+.detalle-wrapper {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 2rem auto 4rem;
+}
+
+.detalle-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  background: rgba(10, 8, 16, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 2rem;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+.detalle-poster {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  aspect-ratio: 2 / 3;
+}
+
+.back-link,
+.detalle-genero {
+  color: #ff98aa;
+}
+
+.detalle-content h1 {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.detalle-descripcion {
+  color: #ddd2df;
+  max-width: 60ch;
+}
+
+.detalle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.detalle-grid div {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.detalle-grid span {
+  display: block;
+  color: #bbaec5;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 800px) {
+  .detalle-card {
+    grid-template-columns: 1fr;
+  }
+
+  .detalle-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,31 +1,56 @@
 .main-wrapper {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto; /* Centra todo el bloque en la pantalla */
+  margin: 0 auto;
   padding: 60px 20px;
   font-family: 'Poppins', sans-serif;
 }
 
+.tarjetas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
 .seccion-titulo {
-  color: #1a1a1a;
+  color: #fff7f4;
   font-size: 2rem;
-  margin-bottom: 40px;
-  text-align: center;
+  margin: 0;
   font-weight: 600;
+}
+
+.seccion-subtitulo {
+  color: #d5cad9;
+  margin-top: 0.5rem;
+}
+
+.genre-filter {
+  display: grid;
+  gap: 0.5rem;
+  color: #f3e8ef;
+}
+
+.genre-filter select {
+  padding: 0.8rem 1rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
 }
 
 .tarjetas-grid {
   display: grid;
-  /* Crea columnas automáticas que se ajustan solas */
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
   justify-items: center;
 }
 
 .card-pro {
-  background-color: #1a1a1a;
+  background-color: rgba(10, 8, 16, 0.8);
   border-radius: 20px;
-  overflow: hidden; /* Corta las esquinas de la imagen */
+  overflow: hidden;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -33,10 +58,9 @@
   width: 100%;
 }
 
-/* Contenedor de imagen y efectos */
 .card-img-container {
   position: relative;
-  aspect-ratio: 2/3; /* Mantiene proporción de poster de cine */
+  aspect-ratio: 2 / 3;
   overflow: hidden;
 }
 
@@ -47,13 +71,9 @@
   transition: transform 0.6s ease;
 }
 
-/* Capa que aparece al pasar el mouse */
 .card-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(255, 77, 109, 0.4);
   display: flex;
   justify-content: center;
@@ -75,7 +95,6 @@
   box-shadow: 0 15px 40px rgba(255, 77, 109, 0.3);
 }
 
-/* Información de la película */
 .card-info {
   padding: 20px;
   color: white;
@@ -89,7 +108,7 @@
   font-size: 1.3rem;
 }
 
-.badge-año {
+.badge-anio {
   background: #ff4d6d;
   color: white;
   padding: 2px 10px;
@@ -99,6 +118,11 @@
   margin-bottom: 15px;
 }
 
+.genre-chip {
+  color: #ff98aa !important;
+  margin-bottom: 0.75rem !important;
+}
+
 .card-info p {
   font-size: 0.9rem;
   color: #bbb;
@@ -106,9 +130,9 @@
   margin: 0;
 }
 
-/* Botón estilo streaming */
 .btn-play {
   background: white;
+  color: #111;
   border: none;
   padding: 10px 20px;
   border-radius: 25px;
@@ -119,4 +143,47 @@
 
 .btn-play:hover {
   transform: scale(1.1);
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  color: #bdaec6;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.btn-secondary,
+.btn-favorite {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.btn-favorite {
+  background: #ff4d6d;
+}
+
+.empty-state {
+  color: #dbcde1;
+}
+
+@media (max-width: 720px) {
+  .tarjetas-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }

@@ -1,0 +1,28 @@
+{
+  "name": "cine-amor-backend",
+  "version": "1.0.0",
+  "description": "API REST para recomendaciones y favoritos de Cine Amor",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "migrate": "sequelize-cli db:migrate",
+    "db:create": "sequelize-cli db:create",
+    "seed": "sequelize-cli db:seed:all"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.3.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.22.0",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "sequelize-cli": "^6.6.2"
+  }
+}
