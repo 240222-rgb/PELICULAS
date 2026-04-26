@@ -1,16 +1,100 @@
-# React + Vite
+# 🎬 Cine Amor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web dedicada a la gestión y recomendación de películas románticas. Permite a los usuarios explorar películas, agregarlas a favoritos y a los administradores gestionar el catálogo completo.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías utilizadas
 
-## React Compiler
+* Frontend: (React / Vue / HTML-CSS-JS)
+* Backend: Node.js + Express
+* Base de datos: MySQL
+* ORM: Sequelize
+* Autenticación: JWT
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📂 Estructura del proyecto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+cine-amor/
+│
+├── backend/
+│   ├── models/
+│   ├── controllers/
+│   ├── routes/
+│   └── middlewares/
+│
+├── frontend/
+│   ├── components/
+│   ├── pages/
+│   └── services/
+```
+
+---
+
+## 🔐 Funcionalidades principales
+
+### 👤 Usuario
+
+* Registro e inicio de sesión
+* Ver catálogo de películas
+* Ver detalles de películas
+* Agregar a favoritos
+
+### 🛠️ Administrador
+
+* Crear películas
+* Editar películas
+* Eliminar películas
+* Gestionar géneros
+
+---
+
+## 📡 Endpoints principales
+
+### 🔑 Login
+
+POST /api/login
+
+### 🎬 Películas
+
+* GET /api/peliculas
+* POST /api/peliculas
+* PUT /api/peliculas/:id
+* DELETE /api/peliculas/:id
+
+### 🎭 Géneros
+
+* GET /api/generos
+* POST /api/generos
+
+## 🔑 Autenticación
+
+Para acceder a rutas protegidas:
+
+```
+Authorization: Bearer TOKEN
+```
+
+---
+
+## 🧪 Pruebas
+
+Se utilizó Thunder Client para probar endpoints:
+
+* Login
+* CRUD de películas
+* Gestión de usuarios
+
+
+![Pantalla de login](./images/inicio.jpeg)
+![Pantalla de login](./images/inicio%20abajo.jpeg)
+![Pantalla de login](./images/leer%20mas.jpeg)
+![Pantalla de login](./images/agregado.jpeg)
+![Pantalla de login](./images/login.jpeg)
+![Pantalla de login](./images/iniciarsesion.jpeg)
+![Pantalla de login](./images/favoritos.jpeg)
+![Pantalla de login](./images/contacto.jpeg)
+![Pantalla de login](./images/bd.jpeg)
+![Pantalla de login](./images/bd%202.jpeg)
